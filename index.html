@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naveena Tankala | Projects</title>
+
+  <!-- Bootstrap & Font -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <script src="https://kit.fontawesome.com/a2e0bf0c3e.js" crossorigin="anonymous"></script>
+
+  <!-- ✅ Correct Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-GNP2yAmxgj5QeCRK7uX4KkQHExsIvVJ4Vvvwqg9Dk7Tjpy9+V7DjNF5YZg+T+ZlK9UUpAz2RHzRA7y9T3M1HwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -147,8 +152,8 @@
 
     .social-icons a {
       margin: 0 10px;
+      font-size: 1.5rem;
       color: #0d6efd;
-      font-size: 1.4rem;
       transition: color 0.3s ease;
     }
 
@@ -159,10 +164,12 @@
 </head>
 
 <body>
+  <!-- 🌙/☀️ Toggle Button -->
   <button class="toggle-btn" onclick="toggleMode()">
     <i id="theme-icon" class="fas fa-moon"></i>
   </button>
 
+  <!-- 👩 Projects Section -->
   <h2>My Projects</h2>
   <div class="project-grid">
 
@@ -208,15 +215,23 @@
 
   </div>
 
+  <!-- 🔗 Footer Section -->
   <footer>
     <div class="social-icons">
-      <a href="https://www.instagram.com/_naveena_03/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/TankalaNaveena" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/naveena-tankala-336302289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/_naveena_03/?hl=en" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/TankalaNaveena" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/naveena-tankala-336302289/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
     <p>© 2025 Naveena Tankala</p>
   </footer>
 
+  <!-- 🌗 Toggle Script -->
   <script>
     function toggleMode() {
       const body = document.body;
