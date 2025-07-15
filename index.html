@@ -2,243 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Naveena Tankala | Projects</title>
-
-  <!-- Bootstrap & Font -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-
-  <!-- ✅ Correct Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-GNP2yAmxgj5QeCRK7uX4KkQHExsIvVJ4Vvvwqg9Dk7Tjpy9+V7DjNF5YZg+T+ZlK9UUpAz2RHzRA7y9T3M1HwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-      transition: background-color 0.3s, color 0.3s;
-      padding-top: 80px;
-    }
-
-    .dark-mode {
-      background-color: #0d1117;
-      color: #c9d1d9;
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-      background-color: transparent;
-      border: none;
-      font-size: 1.5rem;
-      color: #0d6efd;
-      cursor: pointer;
-    }
-
-    .dark-mode .toggle-btn {
-      color: #f0f6fc;
-    }
-
-    h2 {
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 30px;
-      color: #0d6efd;
-    }
-
-    .dark-mode h2 {
-      color: #58a6ff;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    @media (min-width: 768px) {
-      .project-grid {
-        grid-template-columns: 1fr 1fr;
-        padding: 0 80px;
-      }
-    }
-
-    .project-card {
-      background-color: #f8f9fa;
-      border-radius: 12px;
-      padding: 24px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .dark-mode .project-card {
-      background-color: #161b22;
-      box-shadow: 0 0 0 1px #30363d;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 0 2px #0d6efd;
-    }
-
-    .project-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 16px;
-    }
-
-    .project-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .project-desc {
-      margin: 10px 0;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    .dark-mode .project-desc {
-      color: #8b949e;
-    }
-
-    .tags span {
-      background-color: #3333cc;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 5px 5px 0 0;
-      display: inline-block;
-      font-size: 0.8rem;
-    }
-
-    .dark-mode .tags span {
-      background-color: #0056cc;
-    }
-
-    .project-btn {
-      margin-top: 16px;
-      background-color: #0d6efd;
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: background-color 0.2s ease;
-    }
-
-    .project-btn:hover {
-      background-color: #0b5ed7;
-    }
-
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-
-    .dark-mode footer {
-      background-color: #161b22;
-      color: #8b949e;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 1.5rem;
-      color: #0d6efd;
-      transition: color 0.3s ease;
-    }
-
-    .dark-mode .social-icons a {
-      color: #f0f6fc;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveena Tankala | Full Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
-  <!-- 🌙/☀️ Toggle Button -->
-  <button class="toggle-btn" onclick="toggleMode()">
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()">
     <i id="theme-icon" class="fas fa-moon"></i>
   </button>
 
-  <!-- 👩 Projects Section -->
-  <h2>My Projects</h2>
-  <div class="project-grid">
+  <!-- Header -->
+  <header class="text-center py-5">
+    <h1 class="fw-bold">Hi, I'm Naveena Tankala</h1>
+    <h4 class="mb-3">Full Stack Developer</h4>
+    <p class="lead px-3">
+      Passionate about building responsive full-stack web applications and solving real-world problems using clean and scalable code.
+    </p>
+    <a class="btn btn-primary mt-3" href="resume.pdf" download>Download Resume</a>
+  </header>
 
-    <div class="project-card">
-      <img src="doctor.jpg" alt="Doctor Appointment" class="project-img" />
-      <div class="project-title">Doctor Appointment Website</div>
-      <div class="tags"><span>React.js</span></div>
-      <p class="project-desc">
-        Developed a healthcare portal for scheduling doctor and patient appointments, booking medicines, and lab tests.
-      </p>
-      <a href="https://github.com/Naveena0306/Doctor_appointment_website.git" class="project-btn" target="_blank">GitHub Repo</a>
+  <!-- Projects -->
+  <section class="container my-5">
+    <h2 class="text-center fw-bold mb-4">My Projects</h2>
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-6">
+        <div class="card project-card">
+          <img src="doctor.jpg" class="card-img-top" alt="Doctor Appointment Website">
+          <div class="card-body">
+            <h5 class="card-title">Doctor Appointment Website</h5>
+            <div class="tags mb-2"><span class="badge bg-primary">React.js</span></div>
+            <p class="card-text">Developed a healthcare portal for scheduling doctor and patient appointments, booking medicines, and lab tests.</p>
+            <a href="https://github.com/Naveena0306/Doctor_appointment_website.git" class="btn btn-outline-primary" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="card project-card">
+          <img src="ayush2.png" class="card-img-top" alt="AYUSH Portal">
+          <div class="card-body">
+            <h5 class="card-title">AYUSH Startup Registration Portal</h5>
+            <div class="tags mb-2">
+              <span class="badge bg-primary">React.js</span>
+              <span class="badge bg-success">Node.js</span>
+              <span class="badge bg-info">Express.js</span>
+              <span class="badge bg-warning text-dark">MySQL</span>
+            </div>
+            <p class="card-text">Built a responsive portal to simplify online registration for AYUSH startups.</p>
+            <a href="https://github.com/Naveena0306/Ayush_Registration_for_startups.git" class="btn btn-outline-primary" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6">
+        <div class="card project-card">
+          <img src="medicine.jpg" class="card-img-top" alt="Medicine Reminder">
+          <div class="card-body">
+            <h5 class="card-title">Medicine Reminder & Tracker</h5>
+            <div class="tags mb-2">
+              <span class="badge bg-dark">MongoDB</span>
+              <span class="badge bg-info">Express.js</span>
+              <span class="badge bg-primary">React.js</span>
+              <span class="badge bg-success">Node.js</span>
+            </div>
+            <p class="card-text">Implemented a medication schedule app for patients using MERN stack.</p>
+            <a href="https://github.com/Naveena0306/Medicine_remiander_and_tracker.git" class="btn btn-outline-primary" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6">
+        <div class="card project-card">
+          <img src="news.jpg" class="card-img-top" alt="News Aggregator">
+          <div class="card-body">
+            <h5 class="card-title">News Aggregator (MERN)</h5>
+            <div class="tags mb-2">
+              <span class="badge bg-primary">React.js</span>
+              <span class="badge bg-success">Node.js</span>
+              <span class="badge bg-info">Express.js</span>
+              <span class="badge bg-dark">MongoDB</span>
+            </div>
+            <p class="card-text">This website gives personalized news based on user preferences and sends weekly updates via email.</p>
+            <a href="https://github.com/Naveena0306/News_Aggregator.git" class="btn btn-outline-primary" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project-card">
-      <img src="ayush2.png" alt="AYUSH Portal" class="project-img" />
-      <div class="project-title">AYUSH Startup Registration Portal</div>
-      <div class="tags"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MySQL</span></div>
-      <p class="project-desc">
-        Built a responsive portal to simplify online registration for AYUSH startups.
-      </p>
-      <a href="https://github.com/Naveena0306/Ayush_Registration_for_startups.git" class="project-btn" target="_blank">GitHub Repo</a>
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-5">
+    <div class="social-icons mb-2">
+      <a href="https://www.linkedin.com/in/naveena-tankala-336302289/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="https://www.instagram.com/_naveena_03/?hl=en" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://x.com/TankalaNaveena" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
     </div>
-
-    <div class="project-card">
-      <img src="medicine.jpg" alt="Medicine Tracker" class="project-img" />
-      <div class="project-title">Medicine Reminder & Tracker</div>
-      <div class="tags"><span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span></div>
-      <p class="project-desc">
-        Implemented a medication schedule app for patients using MERN stack.
-      </p>
-      <a href="https://github.com/Naveena0306/Medicine_remiander_and_tracker.git" class="project-btn" target="_blank">GitHub Repo</a>
-    </div>
-
-    <div class="project-card">
-      <img src="news.jpg" alt="News Aggregator" class="project-img" />
-      <div class="project-title">News Aggregator (MERN)</div>
-      <div class="tags"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span></div>
-      <p class="project-desc">
-        This website gives personalized news based on user preferences and sends weekly updates via email.
-      </p>
-      <a href="https://github.com/Naveena0306/News_Aggregator.git" class="project-btn" target="_blank">GitHub Repo</a>
-    </div>
-
-  </div>
-
-  <!-- 🔗 Footer Section -->
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/_naveena_03/?hl=en" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://x.com/TankalaNaveena" target="_blank" aria-label="Twitter">
-        <i class="fab fa-x-twitter"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/naveena-tankala-336302289/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-    <p>© 2025 Naveena Tankala</p>
+    <p class="mb-0">© 2025 Naveena Tankala</p>
   </footer>
 
-  <!-- 🌗 Toggle Script -->
   <script>
-    function toggleMode() {
-      const body = document.body;
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
       const icon = document.getElementById('theme-icon');
-      body.classList.toggle('dark-mode');
-      icon.classList.toggle('fa-sun');
       icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
     }
   </script>
 </body>
