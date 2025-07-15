@@ -1,8 +1,84 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #ffffff;
-  color: #222;
-  transition: all 0.3s ease;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h2 {
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 2px #0d6efd;
+}
+
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background-color: #0d6efd;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #0d6efd;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-btn:hover {
+  background-color: #0b5ed7;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+footer {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.social-icons img {
+  width: 28px;
+  margin: 0 10px;
+  transition: 0.3s;
 }
 
 .dark-mode {
@@ -10,45 +86,17 @@ body {
   color: #c9d1d9;
 }
 
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #0d6efd;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.theme-toggle i {
-  font-size: 1.2rem;
-}
-
-.project-card {
-  transition: 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: #0d6efd;
-}
-
-.dark-mode .card {
+.dark-mode .project-card {
   background-color: #161b22;
-  border-color: #30363d;
+  color: #c9d1d9;
 }
 
-.badge {
-  font-size: 0.75rem;
+.dark-mode .badge {
+  background-color: #238636;
 }
 
-footer {
-  background: #f1f1f1;
-  color: #333;
+.dark-mode .project-btn {
+  background-color: #238636;
 }
 
 .dark-mode footer {
@@ -56,16 +104,6 @@ footer {
   color: #8b949e;
 }
 
-.social-icons a {
-  color: inherit;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #0d6efd;
-}
-
-.dark-mode .social-icons a {
-  color: #c9d1d9;
+.dark-mode .social-icons img {
+  filter: brightness(0) invert(1);
 }
